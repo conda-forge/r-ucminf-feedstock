@@ -11,6 +11,9 @@ env:
     
     - CONDA_R=3.3.2
     - CONDA_R=3.4.1
+  global:
+    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
+    - secure: "JUAhaeaOJohYbL0GZBD3ZX5ABNJulsDGtN79H3xpZCNosEzdETmlqeJoxfCeJ2CxDJ53er8HPBHgRGL0ZwJmPBXrhpEW2I4FH88gqKmQehAhbdKZ684wccFRIB7ggl5xe//53pBFon8gU2b2u3Z10u0LomksenqZGo64Aq63kce7knV7vwjZOgrnQcBR+52ctA2R31F8X3JMSZilYG+mrAmq4lxO47zUyhcxqxVAKaZcUOVsdseu9YF5XtfG3ODNIVR1pAAboC80RHyrvQ2DQEbKyaAVEs2i/HPuXo47/Ks3MLZWJgjQYH5AtlmCj+obUL0hLRLIwIFoGoX54aJqG1a6U5DfU+KRwpWt8F4i5IxLGdFI3n1688lO5PYbQLvV257vN5j2DYmJ4ArSPr+8GzOLxcP2EmNfFGeuh8xv73DohvpUQ0Y7Z9fDohhPtvSz4UPNimn5wNNjgOg2C1LmjoLlqt906gesAEWk811ggZ3ptaTE0WpE1VLD8AFYDO7Y4yH6onBD853Nt3HpAqMkVKx9VyA7tZHUE/QmNkAcAwB865gwGkY51jdgf3490PuZZsMqNRCmZxjwRzpvmD0QctvsmNRQSwR/xsqlHfWe+MxBpbI2nhz48yQdb6AQyGmrHTAhVlos8qHiuxmtr7R/EQVTpzMc2/AAMFw6tlr/m0k="
 
 
 before_install:
