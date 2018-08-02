@@ -14,14 +14,16 @@ Summary: An algorithm for general-purpose unconstrained non-linear optimization.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-ucminf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-ucminf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-ucminf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-ucminf-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-ucminf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-ucminf-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-ucminf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-ucminf-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-ucminf-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-ucminf-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-ucminf-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-ucminf-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-ucminf/badges/version.svg)](https://anaconda.org/conda-forge/r-ucminf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-ucminf/badges/downloads.svg)](https://anaconda.org/conda-forge/r-ucminf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--ucminf-green.svg)](https://anaconda.org/conda-forge/r-ucminf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-ucminf.svg)](https://anaconda.org/conda-forge/r-ucminf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-ucminf.svg)](https://anaconda.org/conda-forge/r-ucminf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-ucminf.svg)](https://anaconda.org/conda-forge/r-ucminf) |
 
 Installing r-ucminf
 ===================
