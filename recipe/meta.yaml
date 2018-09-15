@@ -1,5 +1,4 @@
 {% set version = '1.1-4' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +9,13 @@ package:
 source:
   fn: ucminf_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/ucminf_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/ucminf/ucminf_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/ucminf_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/ucminf/ucminf_{{ version }}.tar.gz
   sha256: a2eb382f9b24e949d982e311578518710f8242070b3aa3314a331c1e1e7f6f07
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -24,20 +23,23 @@ build:
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('fortran') }}        # [unix]
-    - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('fortran') }}  # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
-    - $R -e "library('ucminf')"  # [not win]
+    - $R -e "library('ucminf')"           # [not win]
     - "\"%R%\" -e \"library('ucminf')\""  # [win]
 
 about:
@@ -53,8 +55,9 @@ about:
 
 extra:
   recipe-maintainers:
-    - cbrueffer
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
+    - dbast
