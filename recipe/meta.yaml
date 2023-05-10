@@ -1,4 +1,4 @@
-{% set version = "1.1-4.1" %}
+{% set version = "1.1-4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ucminf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ucminf/ucminf_{{ version }}.tar.gz
-  sha256: 01a5b6f373ad267d22e2c29b8f7b6e31a1a148e48f4413e6a38e51aa049976b2
+  sha256: a1508fd4e7dc93b2118f86f21c89d6849117ceec77644738c092cdf13c9e4f37
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
