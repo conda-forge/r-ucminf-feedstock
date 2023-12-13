@@ -3,6 +3,7 @@ About r-ucminf-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ucminf-feedstock/blob/main/LICENSE.txt)
 
+
 About r-ucminf
 --------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=ucminf
 Package license: GPL-2.0-or-later
 
 Summary: An algorithm for general-purpose unconstrained non-linear optimization. The algorithm is of quasi-Newton type with BFGS updating of the inverse Hessian and soft line search with a trust region type monitoring of the input to the line search algorithm. The interface of 'ucminf' is designed for easy interchange with 'optim'.
+
 About r-ucminf
 --------------
 
@@ -188,7 +190,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
