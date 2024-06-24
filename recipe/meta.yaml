@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ucminf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ucminf/ucminf_{{ version }}.tar.gz
-  sha256: ed3ebba3d99a324444bd521d7aeb9f87344f44f170d67f77dab18dd3fbbfcc83
+  sha256: 4bdb6ae769fa49a167cfdc92dc544ba3b6f34df6c08810cfb0c55613aff5bd29
 
 build:
   merge_build_host: true  # [win]
@@ -22,8 +22,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
+    - {{ stdlib("c") }}          # [not win]
     - {{ compiler('fortran') }}  # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('m2w64_fortran') }}        # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
